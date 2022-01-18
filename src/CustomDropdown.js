@@ -32,7 +32,11 @@ const Dropdown = ({label}) => {
         <Text style={styles.drpdownButtonText}>
           {selectdItem ? selectdItem : label}
         </Text>
-        <Icon name="chevron-down" color="#333" size={20} />
+        <Icon
+          name={visible ? 'chevron-up' : 'chevron-down'}
+          color="#333"
+          size={20}
+        />
       </TouchableOpacity>
       {visible && (
         <FlatList
